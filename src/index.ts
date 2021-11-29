@@ -1,19 +1,21 @@
+#!/usr/bin/env node
+
 import http from 'http';
 import harmon, { Select } from 'harmon';
 import connect from 'connect';
-import vite from 'vite';
-import { configuration } from './config';
 import { createProxyServer } from './server/proxy';
 import { createViteServer } from './server/vite';
 import { portletInjectorSelect } from './selects/portletInjectorSelect';
+import { reactRefreshSelect } from './selects/reactRefreshSelect';
 
-async function bootstrap() {
+(async () => {
   // Create servers
   const connectServer = connect();
   const proxyServer = createProxyServer();
   const viteServer = await createViteServer();
 
-  const selects: Select[] = [portletInjectorSelect];
+  // Register selects
+  const selects: Select[] = [portletInjectorSelect, reactRefreshSelect];
 
   // Register middlewares
   connectServer.use(viteServer.middlewares);
@@ -22,6 +24,5 @@ async function bootstrap() {
 
   // Create endpoint
   http.createServer(connectServer).listen(9001);
-}
-
-bootstrap();
+  console.log('Server running aon http://localhost:9001/');
+})();
