@@ -2,11 +2,16 @@
   "compilerOptions": {
     "module": "ESNext",
     "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "target": "ESNext",
+    "esModuleInterop": true,
     "noImplicitAny": true,
     "removeComments": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "types": ["@types/node"]
+    "types": ["@types/node"],
+    "outDir": "dist",
+    "declaration": true,
+    "rootDir": "src"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
