@@ -1,32 +1,33 @@
-import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import json from '@rollup/plugin-json'
-import copy from 'rollup-plugin-copy'
-import esbuild from 'rollup-plugin-esbuild'
+import resolve from '@rollup/plugin-node-resolve';
+import esbuild from 'rollup-plugin-esbuild';
+import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
 
-export default {
-  input: 'src/mod.ts',
+/**
+ * @type {import('rollup').RollupOptions}
+ */
+const config = {
+  input: 'src/server.ts',
   plugins: [
     resolve({
-      preferBuiltins: true
+      preferBuiltins: true,
     }),
+    commonjs(),
     esbuild({
       minify: true,
     }),
-    copy({
-      targets: [
-        {
-          src: 'src/templates/*',
-          dest: 'dist/templates/'
-        }
-      ]
-    })
+    replace({
+      preventAssignment: true,
+      'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
   ],
   output: [
     {
-      file: 'bin/bundler.js',
+      file: 'dist/index.js',
       format: 'cjs',
-      compact: true
-    }
-  ]
-}
+      compact: true,
+    },
+  ],
+};
+
+export default config;
