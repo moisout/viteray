@@ -1,8 +1,8 @@
 import httpProxy from 'http-proxy';
 import { configuration } from '../config';
 
-export function createProxyServer() {
+export function createProxyServer(url: string) {
   return httpProxy.createProxyServer({
-    target: configuration.liferayUrl,
+    target: url,
   });
 }
