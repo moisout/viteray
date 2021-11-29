@@ -39,6 +39,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/connect@npm:^3.4.35":
+  version: 3.4.35
+  resolution: "@types/connect@npm:3.4.35"
+  dependencies:
+    "@types/node": "*"
+  checksum: fe81351470f2d3165e8b12ce33542eef89ea893e36dd62e8f7d72566dfb7e448376ae962f9f3ea888547ce8b55a40020ca0e01d637fab5d99567673084542641
+  languageName: node
+  linkType: hard
+
+"@types/harmon@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@types/harmon@npm:1.4.1"
+  checksum: a8fa3afb395636563197753fb419c4be32bcc11a0f93b763c2133a87daaf93548d7f955333fa00e0a4656caa3d8bcadecd89a8726c8091078a1d859a2d3a238b
+  languageName: node
+  linkType: hard
+
+"@types/http-proxy@npm:^1.17.7":
+  version: 1.17.7
+  resolution: "@types/http-proxy@npm:1.17.7"
+  dependencies:
+    "@types/node": "*"
+  checksum: 88f9c75ca65378d0287d8d0b1dbeed372c8267f4841fe2f6f2d759522494382d3943bc6cc774bef7dd125464a266bafeda813d3658b17a2d1e74acc4efb6e21c
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:*, @types/node@npm:^16.11.10":
+  version: 16.11.10
+  resolution: "@types/node@npm:16.11.10"
+  checksum: 9c79419c5c3d92d5825bffa30f3668533f598d8b63a73ea7fc24e47f162bdbed92b0f8e4f4261cc3314b39cee050e303366d2aa154abc95c63a572a110b8c160
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -803,9 +835,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "liferay-vite-dev@workspace:."
   dependencies:
+    "@types/connect": ^3.4.35
+    "@types/harmon": ^1.4.1
+    "@types/http-proxy": ^1.17.7
+    "@types/node": ^16.11.10
     connect: ^3.7.0
     harmon: ^1.4.4
     http-proxy: ^1.18.1
+    rollup: ^2.60.1
     typescript: ^4.5.2
     vite: ^2.6.14
   languageName: unknown
@@ -1082,13 +1119,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.3.8":
-  version: 8.4.3
-  resolution: "postcss@npm:8.4.3"
+  version: 8.4.4
+  resolution: "postcss@npm:8.4.4"
   dependencies:
     nanoid: ^3.1.30
     picocolors: ^1.0.0
     source-map-js: ^1.0.1
-  checksum: fbc0d43380c2d7ee905081577c79b18a341a3445d34211385c33d57cc38f3abe6859b2ad94b96f41bb4107133a1cd5f317d82bb3f603280433f1dcf5dc62acb5
+  checksum: 6cf3fe0ecdf5a0d2aeb5e8404938c7eab968704e2e29dc5421e90b4014eb1975c1c0ad828425f2428807ef6e3fcfadd71f988ab55cb06c28ac2866f22403255b
   languageName: node
   linkType: hard
 
@@ -1198,7 +1235,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.57.0":
+"rollup@npm:^2.57.0, rollup@npm:^2.60.1":
   version: 2.60.1
   resolution: "rollup@npm:2.60.1"
   dependencies:
