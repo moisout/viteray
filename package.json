@@ -1,6 +1,6 @@
 {
   "name": "liferay-vite-dev",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": " Use vite dev server for liferay portlets!",
   "main": "src/index",
   "homepage": "https://github.com/mauriceoegerli/liferay-vite-dev",
