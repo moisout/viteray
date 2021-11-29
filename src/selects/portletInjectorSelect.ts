@@ -19,7 +19,7 @@ export const portletInjectorSelect: Select = {
         document.querySelector('#' + variables.portletElementId).appendChild(scriptElement);
       }
       
-      if(args[0] === '${configuration.portletName}@1.0.0') {
+      if(args[0] === '${configuration.portletFullName}') {
         args[1](moduleLogger);
         Liferay.Loader.require = oldFunction;
       }

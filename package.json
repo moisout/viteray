@@ -1,26 +1,45 @@
 {
   "name": "liferay-vite-dev",
+  "version": "0.0.4",
+  "description": " Use vite dev server for liferay portlets!",
+  "main": "src/index",
+  "homepage": "https://github.com/mauriceoegerli/liferay-vite-dev",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mauriceoegerli/liferay-vite-dev.git"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [],
+  "author": "Maurice Oegerli <liferay-vite-dev@m-o.dev>",
+  "license": "MIT",
   "packageManager": "yarn@3.1.1",
   "scripts": {
     "build": "tsc --project tsconfig.json"
   },
+  "bin": "dist/index.js",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-replace": "^3.0.0",
     "@types/connect": "^3.4.35",
     "@types/harmon": "^1.4.1",
     "@types/http-proxy": "^1.17.7",
     "@types/node": "^16.11.10",
+    "@types/yargs": "^17.0.7",
     "esbuild": "^0.14.0",
     "rollup": "^2.60.1",
     "rollup-plugin-esbuild": "^4.7.2",
+    "rollup-plugin-preserve-shebangs": "^0.2.0",
     "typescript": "^4.5.2"
   },
   "dependencies": {
     "connect": "^3.7.0",
     "harmon": "^1.4.4",
     "http-proxy": "^1.18.1",
-    "vite": "^2.6.14"
+    "vite": "^2.6.14",
+    "yargs": "^17.2.1"
   }
 }
