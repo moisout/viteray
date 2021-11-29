@@ -9,36 +9,29 @@ import { portletInjectorSelect } from './selects/portletInjectorSelect';
 import { reactRefreshSelect } from './selects/reactRefreshSelect';
 import yargs from 'yargs';
 
-yargs(process.argv.slice(2))
-  .scriptName('liferay-vite-dev')
-  .usage('$0 <cmd> [args]')
-  .command(
-    '[url]',
-    'Runs the development server',
-    (yargs) => {
-      yargs.positional('url', {
-        type: 'string',
-        describe: 'The url of your liferay instance',
-      });
-    },
-    async (argv) => {
-      // Create servers
-      const connectServer = connect();
-      const proxyServer = createProxyServer(argv.url as string);
-      const viteServer = await createViteServer();
+const parser = yargs(process.argv.slice(2)).options({
+  u: { type: 'string', alias: 'url', demandOption: true },
+  p: { type: 'number', alias: 'port' },
+});
 
-      // Register selects
-      const selects: Select[] = [portletInjectorSelect, reactRefreshSelect];
+(async () => {
+  const argv = await parser.argv;
+  // Create servers
+  const connectServer = connect();
+  const proxyServer = createProxyServer(argv.u);
+  const viteServer = await createViteServer();
 
-      // Register middlewares
-      connectServer.use(viteServer.middlewares);
-      connectServer.use(harmon([], selects));
-      connectServer.use((req, res) => proxyServer.web(req, res));
+  // Register selects
+  const selects: Select[] = [portletInjectorSelect, reactRefreshSelect];
 
-      // Create endpoint
-      http.createServer(connectServer).listen(9001);
-      console.log('Server running on http://localhost:9001/');
-    }
-  )
-  .help()
-  .parse();
+  // Register middlewares
+  connectServer.use(viteServer.middlewares);
+  connectServer.use(harmon([], selects));
+  connectServer.use((req, res) => proxyServer.web(req, res));
+
+  let port = argv.p ? argv.p : 9001;
+
+  // Create endpoint
+  http.createServer(connectServer).listen(port);
+  console.log(`Server running on http://localhost:${port}/`);
+})();
