@@ -1,8 +1,6 @@
-import resolve from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
-import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
-import { preserveShebangs } from 'rollup-plugin-preserve-shebangs'
+import { preserveShebangs } from 'rollup-plugin-preserve-shebangs';
 import json from '@rollup/plugin-json';
 
 /**
@@ -11,25 +9,29 @@ import json from '@rollup/plugin-json';
 const config = {
   input: 'src/index.ts',
   plugins: [
-    resolve({
-      preferBuiltins: true,
-    }),
     commonjs(),
     json(),
     esbuild({
-      // minify: true,
-    }),
-    replace({
-      preventAssignment: true,
+      minify: true,
     }),
     preserveShebangs(),
   ],
   output: [
     {
-      file: 'bin/index.js',
-      format: 'esm',
-      // compact: true,
+      file: 'dist/index.js',
+      format: 'cjs',
+      compact: true,
     },
+  ],
+  external: [
+    'http',
+    'harmon',
+    'connect',
+    'yargs',
+    'http-proxy',
+    'vite',
+    'path',
+    'fs',
   ],
 };
 

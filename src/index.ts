@@ -6,8 +6,8 @@ import connect from 'connect';
 import { createProxyServer } from './server/proxy';
 import { createViteServer } from './server/vite';
 import { portletInjectorSelect } from './selects/portletInjectorSelect';
-import { reactRefreshSelect } from './selects/reactRefreshSelect';
 import yargs from 'yargs';
+import { getVitePluginTransformSelect } from './selects/vitePluginTransformSelect';
 
 const parser = yargs(process.argv.slice(2)).options({
   u: { type: 'string', alias: 'url', demandOption: true },
@@ -21,12 +21,16 @@ const parser = yargs(process.argv.slice(2)).options({
   const proxyServer = createProxyServer(argv.u);
   const viteServer = await createViteServer();
 
+  const vitePluginInjectionSelect = getVitePluginTransformSelect(
+    viteServer.config.plugins
+  );
+
   // Register selects
-  const selects: Select[] = [portletInjectorSelect, reactRefreshSelect];
+  const selects: Select[] = [portletInjectorSelect, vitePluginInjectionSelect];
 
   // Register middlewares
   connectServer.use(viteServer.middlewares);
-  connectServer.use(harmon([], selects));
+  connectServer.use(harmon([], selects, true));
   connectServer.use((req, res) => proxyServer.web(req, res));
 
   let port = argv.p ? argv.p : 9001;
