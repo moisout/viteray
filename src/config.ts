@@ -19,6 +19,10 @@ function getConfiguration() {
       entryPoint = `/${entryPoint}`;
     }
 
+    if (!entryPoint.startsWith('/src')) {
+      entryPoint = `/src${entryPoint}`;
+    }
+
     return {
       liferayUrl: 'http://moe.liferay.ch',
       portletFullName: `${name}@${version}`,
