@@ -2,7 +2,7 @@
 <sub>
   <img src="assets/logo.svg" height="50" width="50" />
 </sub>
-liferay-vite-dev
+viteray
 </h1>
 <p align='center'>
   <img alt="npm" src="https://img.shields.io/npm/v/liferay-vite-dev?style=for-the-badge">
