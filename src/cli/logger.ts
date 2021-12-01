@@ -10,7 +10,7 @@ class Logger {
   private box(msg: string): string {
     let horizontal = '';
 
-    for (let i = 0; i++; i < 20) {
+    for (let i = 0; i < 20; i++) {
       horizontal += this.chars.horizontalWall;
     }
 
