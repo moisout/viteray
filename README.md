@@ -5,7 +5,7 @@
 viteray
 </h1>
 <p align='center'>
-  <img alt="npm" src="https://img.shields.io/npm/v/viteray?style=for-the-badge">
+  <img alt="npm" src="https://img.shields.io/npm/v/@clavis/viteray?style=for-the-badge">
   <img alt="GitHub" src="https://img.shields.io/github/license/mauriceoegerli/viteray?style=for-the-badge">
 </p>
 
@@ -23,11 +23,11 @@ Highlights:
 1. Install viteray
 
 ```shell
-npm i -D viteray
+npm i -D @clavis/viteray
 
-pnpm i -D viteray
+pnpm i -D @clavis/viteray
 
-yarn add -D viteray
+yarn add -D @clavis/viteray
 ```
 
 2. Add a vite.config.js file
