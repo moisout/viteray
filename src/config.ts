@@ -1,14 +1,22 @@
 import path from 'path';
 import fs from 'fs';
 
-function getConfiguration() {
+export type Configuration = {
+  portletFullName: string;
+  portletName: string;
+  entryPoint: string;
+  webContext: string;
+  webContextPath: string;
+};
+
+export function getConfiguration(entryPointArg = '') {
   const packageJsonDir = path.join(process.cwd(), 'package.json');
   const npmBundlerrcDir = path.join(process.cwd(), '.npmbundlerrc');
 
   let config = {
     portletFullName: '',
     portletName: '',
-    entryPoint: '',
+    entryPoint: entryPointArg,
     webContext: '',
     webContextPath: '',
   };
@@ -44,21 +52,25 @@ function getConfiguration() {
       'portlet',
       'javax.portlet.name'
     );
-    let entryPoint = getPackageJsonField(packageJson, 'main');
 
-    if (!entryPoint.startsWith('/')) {
-      entryPoint = `/${entryPoint}`;
-    }
+    let entryPoint = entryPointArg;
+    if (!entryPoint) {
+      let entryPoint = getPackageJsonField(packageJson, 'main');
 
-    if (!entryPoint.startsWith('/src')) {
-      entryPoint = `/src${entryPoint}`;
+      if (!entryPoint.startsWith('/')) {
+        entryPoint = `/${entryPoint}`;
+      }
+
+      if (!entryPoint.startsWith('/src')) {
+        entryPoint = `/src${entryPoint}`;
+      }
     }
 
     config = {
       ...config,
       portletFullName: `${name}@${version}`,
       portletName: name,
-      entryPoint: entryPoint,
+      entryPoint,
     };
   } else {
     throw new Error('No package.json found.');
@@ -84,5 +96,3 @@ function getPackageJsonField(
   }
   throw new Error(`Field "${field}" in package.json missing.`);
 }
-
-export const configuration = getConfiguration();

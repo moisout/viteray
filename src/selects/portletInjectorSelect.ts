@@ -1,10 +1,14 @@
-import { configuration } from '../config';
+import { Configuration } from '../config';
 import { Select } from 'harmon';
 
-export const portletInjectorSelect: Select = {
-  query: `.portlet-boundary_${configuration.portletName.replaceAll('-', '')}_>.portlet-body>div`,
-  func: (node) => {
-    const out = `<script type='text/javascript'>(function () {
+export function getPortletInjectorSelect(configuration: Configuration): Select {
+  return {
+    query: `.portlet-boundary_${configuration.portletName.replaceAll(
+      '-',
+      ''
+    )}_>.portlet-body>div`,
+    func: (node) => {
+      const out = `<script type='text/javascript'>(function () {
       const oldFunction = Liferay.Loader.require;         
       Liferay.Loader.require = function (...args) {
         const moduleLogger = (...args) => {
@@ -22,16 +26,17 @@ export const portletInjectorSelect: Select = {
         return oldFunction(...args);
     }})();</script>`;
 
-    const readStream = node.createReadStream();
-    const writeStream = node.createWriteStream({ outer: false });
+      const readStream = node.createReadStream();
+      const writeStream = node.createWriteStream({ outer: false });
 
-    // Read the node and put it back into our write stream,
-    // but don't end the write stream when the readStream is closed.
-    readStream.pipe(writeStream, { end: false });
+      // Read the node and put it back into our write stream,
+      // but don't end the write stream when the readStream is closed.
+      readStream.pipe(writeStream, { end: false });
 
-    // When the read stream has ended, attach our style to the end
-    readStream.on('end', function () {
-      writeStream.end(out);
-    });
-  },
-};
+      // When the read stream has ended, attach our style to the end
+      readStream.on('end', function () {
+        writeStream.end(out);
+      });
+    },
+  };
+}

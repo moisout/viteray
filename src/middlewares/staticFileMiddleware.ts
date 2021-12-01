@@ -3,9 +3,9 @@ import fs from 'fs/promises';
 import finalhandler from 'finalhandler';
 import { IncomingMessage, NextFunction } from 'connect';
 import { ServerResponse } from 'http';
-import { configuration } from '../config';
+import { Configuration } from '../config';
 
-export async function getStaticAssetsMiddleware() {
+export async function getStaticAssetsMiddleware(configuration: Configuration) {
   try {
     const assetsPath = `${process.cwd()}/assets`;
     await fs.access(assetsPath);

@@ -6,19 +6,23 @@ import connect from 'connect';
 import serveStatic from 'serve-static';
 import { createProxyServer } from './server/proxy';
 import { createViteServer } from './server/vite';
-import { portletInjectorSelect } from './selects/portletInjectorSelect';
+import { getPortletInjectorSelect } from './selects/portletInjectorSelect';
 import yargs from 'yargs';
 import { getVitePluginTransformSelect } from './selects/vitePluginTransformSelect';
-import { configuration } from './config';
+import { getConfiguration } from './config';
 import { getStaticAssetsMiddleware } from './middlewares/staticFileMiddleware';
 
 const parser = yargs(process.argv.slice(2)).options({
   u: { type: 'string', alias: 'url', demandOption: true },
   p: { type: 'number', alias: 'port' },
+  e: { type: 'string', alias: 'entrypoint' },
 });
 
 (async () => {
   const argv = await parser.argv;
+
+  const configuration = getConfiguration(argv.e);
+
   // Create servers
   const connectServer = connect();
   const proxyServer = createProxyServer(argv.u);
@@ -28,10 +32,12 @@ const parser = yargs(process.argv.slice(2)).options({
     viteServer.config.plugins
   );
 
+  const portletInjectorSelect = getPortletInjectorSelect(configuration);
+
   // Register selects
   const selects: Select[] = [portletInjectorSelect, vitePluginInjectionSelect];
 
-  const staticAssetsMiddleware = await getStaticAssetsMiddleware();
+  const staticAssetsMiddleware = await getStaticAssetsMiddleware(configuration);
 
   // Register middlewares
   connectServer.use(viteServer.middlewares);
