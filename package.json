@@ -1,18 +1,18 @@
 {
-  "name": "liferay-vite-dev",
+  "name": "viteray",
   "version": "0.0.8",
   "description": "Zero-config module to use vite for liferay portlet development.",
   "main": "src/index",
-  "homepage": "https://github.com/mauriceoegerli/liferay-vite-dev",
+  "homepage": "https://github.com/mauriceoegerli/viteray",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mauriceoegerli/liferay-vite-dev.git"
+    "url": "git@github.com:mauriceoegerli/viteray.git"
   },
   "files": [
     "/dist"
   ],
   "keywords": [],
-  "author": "Maurice Oegerli <liferay-vite-dev@m-o.dev>",
+  "author": "Maurice Oegerli <viteray@m-o.dev>",
   "license": "MIT",
   "packageManager": "yarn@3.1.1",
   "scripts": {

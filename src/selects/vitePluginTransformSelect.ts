@@ -41,7 +41,7 @@ function getViteIndexHtmlTransforms(
 
     if (transformIndexHtmlFn.length > 0) {
       vitePluginWarn(
-        "liferay-vite-dev doesn't support dynamic html transforms yet.",
+        "viteray doesn't support dynamic html transforms yet.",
         plugin.name
       );
     } else {
@@ -58,7 +58,7 @@ function getViteIndexHtmlTransforms(
           return htmlInjectionString;
         } else {
           vitePluginWarn(
-            'liferay-vite-dev only supports transformIndexHtml functions returning an array.',
+            'viteray only supports transformIndexHtml functions returning an array.',
             plugin.name
           );
         }

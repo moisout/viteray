@@ -1254,38 +1254,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"liferay-vite-dev@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "liferay-vite-dev@workspace:."
-  dependencies:
-    "@rollup/plugin-commonjs": ^21.0.1
-    "@rollup/plugin-json": ^4.1.0
-    "@types/connect": ^3.4.35
-    "@types/finalhandler": ^1.1.1
-    "@types/harmon": ^1.4.1
-    "@types/http-proxy": ^1.17.7
-    "@types/node": ^16.11.10
-    "@types/serve-static": ^1.13.10
-    "@types/yargs": ^17.0.7
-    chalk: ^5.0.0
-    connect: ^3.7.0
-    esbuild: ^0.14.0
-    finalhandler: ^1.1.2
-    harmon: ^1.4.4
-    http-proxy: ^1.18.1
-    prettier: ^2.5.0
-    rollup: ^2.60.1
-    rollup-plugin-esbuild: ^4.7.2
-    rollup-plugin-preserve-shebangs: ^0.2.0
-    serve-static: ^1.14.1
-    typescript: ^4.5.2
-    vite: ^2.6.14
-    yargs: ^17.2.1
-  bin:
-    liferay-vite-dev: dist/index.js
-  languageName: unknown
-  linkType: soft
-
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0"
@@ -2112,6 +2080,38 @@ __metadata:
   checksum: 4bf2b7407771440de81546932cf0b1bd74f9254e6056665a596b9310f37b2d34a65728a2a0525300ef48fa1f3e2ec5a3366326eecf31db7b86c19463e22186a8
   languageName: node
   linkType: hard
+
+"viteray@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "viteray@workspace:."
+  dependencies:
+    "@rollup/plugin-commonjs": ^21.0.1
+    "@rollup/plugin-json": ^4.1.0
+    "@types/connect": ^3.4.35
+    "@types/finalhandler": ^1.1.1
+    "@types/harmon": ^1.4.1
+    "@types/http-proxy": ^1.17.7
+    "@types/node": ^16.11.10
+    "@types/serve-static": ^1.13.10
+    "@types/yargs": ^17.0.7
+    chalk: ^5.0.0
+    connect: ^3.7.0
+    esbuild: ^0.14.0
+    finalhandler: ^1.1.2
+    harmon: ^1.4.4
+    http-proxy: ^1.18.1
+    prettier: ^2.5.0
+    rollup: ^2.60.1
+    rollup-plugin-esbuild: ^4.7.2
+    rollup-plugin-preserve-shebangs: ^0.2.0
+    serve-static: ^1.14.1
+    typescript: ^4.5.2
+    vite: ^2.6.14
+    yargs: ^17.2.1
+  bin:
+    viteray: dist/index.js
+  languageName: unknown
+  linkType: soft
 
 "which@npm:^2.0.2":
   version: 2.0.2

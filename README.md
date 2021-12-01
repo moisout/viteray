@@ -5,8 +5,8 @@
 viteray
 </h1>
 <p align='center'>
-  <img alt="npm" src="https://img.shields.io/npm/v/liferay-vite-dev?style=for-the-badge">
-  <img alt="GitHub" src="https://img.shields.io/github/license/mauriceoegerli/liferay-vite-dev?style=for-the-badge">
+  <img alt="npm" src="https://img.shields.io/npm/v/viteray?style=for-the-badge">
+  <img alt="GitHub" src="https://img.shields.io/github/license/mauriceoegerli/viteray?style=for-the-badge">
 </p>
 
 Zero-config module to use vite for liferay portlet development.
@@ -20,14 +20,14 @@ Highlights:
 
 ## How-to
 
-1. Install liferay-vite-dev
+1. Install viteray
 
 ```shell
-npm i -D liferay-vite-dev
+npm i -D viteray
 
-pnpm i -D liferay-vite-dev
+pnpm i -D viteray
 
-yarn add -D liferay-vite-dev
+yarn add -D viteray
 ```
 
 2. Add a vite.config.js file
@@ -59,7 +59,7 @@ export default {
 ```json
 {
   "scripts": {
-    "dev": "liferay-vite-dev -c http://example.com"
+    "dev": "viteray -c http://example.com"
   }
 }
 ```
