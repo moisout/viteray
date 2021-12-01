@@ -1,5 +1,5 @@
 {
-  "name": "viteray",
+  "name": "@clavis/viteray",
   "version": "0.0.8",
   "description": "Zero-config module to use vite for liferay portlet development.",
   "main": "src/index",
@@ -18,7 +18,9 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "bin": "dist/index.js",
+  "bin": {
+    "viteray": "dist/index.js"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
