@@ -1,7 +1,4 @@
 <h1 align='center'>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <sub>
   <img src="assets/logo.svg" height="50" width="50" />
 </sub>
