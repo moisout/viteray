@@ -31,7 +31,10 @@ const config = {
     'http-proxy',
     'vite',
     'path',
+    'serve-static',
     'fs',
+    'fs/promises',
+    'finalhandler'
   ],
 };
 

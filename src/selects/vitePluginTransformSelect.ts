@@ -7,7 +7,6 @@ export const getVitePluginTransformSelect = (
   query: 'head',
   func: (node) => {
     const out = getViteIndexHtmlTransformString(vitePlugins);
-    console.log(out);
 
     const readStream = node.createReadStream();
     const writeStream = node.createWriteStream({ outer: false });
