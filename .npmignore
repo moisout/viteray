@@ -12,3 +12,6 @@ package-lock.json
 .pnpm-debug.log
 pnpm-lock.yaml
 yarn.lock
+
+# ignore images
+assets/**/*
