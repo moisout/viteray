@@ -1,27 +1,27 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@rollup/plugin-commonjs': ^21.0.1
-  '@rollup/plugin-json': ^4.1.0
-  '@types/connect': ^3.4.35
-  '@types/finalhandler': ^1.1.1
-  '@types/harmon': ^1.4.1
-  '@types/http-proxy': ^1.17.7
-  '@types/node': ^16.11.10
-  '@types/serve-static': ^1.13.10
-  '@types/yargs': ^17.0.7
+  '@rollup/plugin-commonjs': 21.0.1
+  '@rollup/plugin-json': 4.1.0
+  '@types/connect': 3.4.35
+  '@types/finalhandler': 1.1.1
+  '@types/harmon': 1.4.1
+  '@types/http-proxy': 1.17.7
+  '@types/node': 16.11.11
+  '@types/serve-static': 1.13.10
+  '@types/yargs': 17.0.7
   chalk: ^5.0.0
   connect: ^3.7.0
-  esbuild: ^0.14.0
+  esbuild: 0.14.1
   finalhandler: ^1.1.2
   harmon: ^1.4.4
   http-proxy: ^1.18.1
-  prettier: ^2.5.0
-  rollup: ^2.60.1
-  rollup-plugin-esbuild: ^4.7.2
-  rollup-plugin-preserve-shebangs: ^0.2.0
+  prettier: 2.5.0
+  rollup: 2.60.2
+  rollup-plugin-esbuild: 4.7.2
+  rollup-plugin-preserve-shebangs: 0.2.0
   serve-static: ^1.14.1
-  typescript: ^4.5.2
+  typescript: 4.5.2
   vite: ^2.6.14
   yargs: ^17.2.1
 
