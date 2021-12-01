@@ -17,7 +17,6 @@ Highlights:
 - No configuration for this module required
 - Supports (almost) all vite plugins
 - Supports portlet assets folder
--
 
 ## How-to
 
