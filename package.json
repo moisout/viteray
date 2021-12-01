@@ -40,7 +40,7 @@
     "typescript": "4.5.2"
   },
   "dependencies": {
-    "chalk": "~4",
+    "chalk": "~5.0.0",
     "connect": "^3.7.0",
     "finalhandler": "^1.1.2",
     "harmon": "^1.4.4",
