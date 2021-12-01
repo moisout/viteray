@@ -3,7 +3,6 @@
 import http from 'http';
 import harmon, { Select } from 'harmon';
 import connect from 'connect';
-import serveStatic from 'serve-static';
 import { createProxyServer } from './server/proxy';
 import { createViteServer } from './server/vite';
 import { getPortletInjectorSelect } from './selects/portletInjectorSelect';
@@ -11,6 +10,7 @@ import yargs from 'yargs';
 import { getVitePluginTransformSelect } from './selects/vitePluginTransformSelect';
 import { getConfiguration } from './config';
 import { getStaticAssetsMiddleware } from './middlewares/staticFileMiddleware';
+import { logger } from './cli/logger';
 
 const parser = yargs(process.argv.slice(2)).options({
   u: { type: 'string', alias: 'url', demandOption: true },
@@ -49,5 +49,5 @@ const parser = yargs(process.argv.slice(2)).options({
 
   // Create endpoint
   http.createServer(connectServer).listen(port);
-  console.log(`Server running on http://localhost:${port}/`);
+  logger.log(`Server running on http://localhost:${port}/`);
 })();

@@ -21,6 +21,7 @@ const config = {
       file: 'dist/index.js',
       format: 'cjs',
       compact: true,
+      interop: 'auto',
     },
   ],
   external: [
@@ -34,7 +35,8 @@ const config = {
     'serve-static',
     'fs',
     'fs/promises',
-    'finalhandler'
+    'finalhandler',
+    'chalk',
   ],
 };
 
