@@ -2,7 +2,7 @@ import { configuration } from '../config';
 import { Select } from 'harmon';
 
 export const portletInjectorSelect: Select = {
-  query: `.portlet-boundary_${configuration.portletName}_>.portlet-body>div`,
+  query: `.portlet-boundary_${configuration.portletName.replaceAll('-', '')}_>.portlet-body>div`,
   func: (node) => {
     const out = `<script type='text/javascript'>(function () {
       const oldFunction = Liferay.Loader.require;         
