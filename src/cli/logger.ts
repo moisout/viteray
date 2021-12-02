@@ -1,37 +1,65 @@
 import chalk from 'chalk';
+import { chars, errorStr, infoStr, logo, smallLogo } from './constants';
 
-class Logger {
-  public log(msg: string): void {
-    process.stdout.write('\n');
-    const msgString = `\n${this.box(chalk.bgBlue.white('i') + msg)}`;
-    process.stdout.write(msgString);
+const consoleWidth = () => {
+  const maxWidth = 100;
+  if (process.stdout.columns < maxWidth - 2) {
+    return process.stdout.columns - 2;
   }
+  return maxWidth;
+};
 
-  private box(msg: string): string {
-    let horizontal = multiplyString(this.chars.horizontalWall, 40);
-    let spaces = multiplyString(' ', 40 - msg.length)
+const stringLength = (str: string) =>
+  str.replaceAll(
+    /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
+    ''
+  ).length;
 
-    return `${this.chars.topLeft}${horizontal}${this.chars.topRight}
-${this.chars.verticalWall} ${msg}${spaces}${this.chars.verticalWall}
-${this.chars.bottomLeft}${horizontal}${this.chars.bottomRight}`;
-  }
+const bar = (left: string, right: string) =>
+  `${left}${chars.horizontalWall.repeat(consoleWidth())}${right}`;
 
-  private chars = {
-    topLeft: '╭',
-    topRight: '╮',
-    bottomLeft: '╰',
-    bottomRight: '╯',
-    horizontalWall: '─',
-    verticalWall: '|',
-  };
-}
+const topBarWithLogo = `${chars.topLeft}${chars.horizontalWall.repeat(
+  consoleWidth() - stringLength(smallLogo) - 3
+)} ${smallLogo} ${chars.horizontalWall.repeat(1)}${chars.topRight}`;
 
-function multiplyString(str: string, times: number): string {
+const topBar = bar(chars.topLeft, chars.topRight);
+const separator = bar(chars.separatorLeft, chars.separatorRight);
+const bottomBar = bar(chars.bottomLeft, chars.bottomRight);
+
+function multilineWithWalls(msg: string) {
   let returnString = '';
-  for (let i = 0; i < times; i++) {
-    returnString += str;
-  }
-  return returnString;
+  msg.split('\n').forEach((msgLine) => {
+    const spaces = ' '.repeat(consoleWidth() - stringLength(msgLine) - 1);
+    returnString += `${chars.verticalWall} ${msgLine}${spaces}${chars.verticalWall}\n`;
+  });
+  return returnString.slice(0, -1);
 }
 
-export const logger = new Logger();
+function titleWithSeparator(title?: string) {
+  return title ? `\n${multilineWithWalls(title)}\n${separator}` : '';
+}
+
+export const logWithModuleLogo = (msg: string) =>
+  logInfo(msg, chalk.blue(logo), true);
+
+export const logInfo = (msg: string, title: string, noLogo?: boolean) =>
+  log(`${infoStr} ${msg}`, title, noLogo);
+
+export const logError = (
+  error: Error,
+  origin?: NodeJS.UncaughtExceptionOrigin
+) =>
+  log(
+    `${chalk.red(error.message)}\n${error.stack}`,
+    `${errorStr} ${error.name}${origin ? `: ${origin}` : ''}`
+  );
+
+export function log(msg: string, title?: string, noLogo = false): void {
+  process.stdout.write(`\n${box(msg, title, noLogo)}`);
+}
+
+export function box(msg: string, title?: string, noLogo?: boolean): string {
+  return `${noLogo ? topBar : topBarWithLogo}${titleWithSeparator(title)}
+${multilineWithWalls(msg)}
+${bottomBar}\n`;
+}

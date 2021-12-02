@@ -14,10 +14,8 @@
   "keywords": [],
   "author": "Maurice Oegerli <viteray@m-o.dev>",
   "license": "MIT",
-  "packageManager": "yarn@3.1.1",
   "scripts": {
-    "build": "rollup -c",
-    "test": "./dist/index.js -u a"
+    "build": "rollup -c"
   },
   "bin": {
     "viteray": "dist/index.js"
@@ -25,7 +23,6 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
-    "@rollup/plugin-node-resolve": "13.0.6",
     "@types/connect": "3.4.35",
     "@types/finalhandler": "1.1.1",
     "@types/harmon": "1.4.1",
