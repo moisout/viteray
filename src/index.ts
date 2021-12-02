@@ -19,6 +19,8 @@ const parser = yargs(process.argv.slice(2)).options({
 });
 
 (async () => {
+  logger.log('testing da loggy');
+
   const argv = await parser.argv;
 
   const configuration = getConfiguration(argv.e);

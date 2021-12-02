@@ -8,14 +8,11 @@ class Logger {
   }
 
   private box(msg: string): string {
-    let horizontal = '';
-
-    for (let i = 0; i < 20; i++) {
-      horizontal += this.chars.horizontalWall;
-    }
+    let horizontal = multiplyString(this.chars.horizontalWall, 40);
+    let spaces = multiplyString(' ', 40 - msg.length)
 
     return `${this.chars.topLeft}${horizontal}${this.chars.topRight}
-${this.chars.verticalWall} ${msg} ${this.chars.verticalWall}
+${this.chars.verticalWall} ${msg}${spaces}${this.chars.verticalWall}
 ${this.chars.bottomLeft}${horizontal}${this.chars.bottomRight}`;
   }
 
@@ -27,6 +24,14 @@ ${this.chars.bottomLeft}${horizontal}${this.chars.bottomRight}`;
     horizontalWall: '─',
     verticalWall: '|',
   };
+}
+
+function multiplyString(str: string, times: number): string {
+  let returnString = '';
+  for (let i = 0; i < times; i++) {
+    returnString += str;
+  }
+  return returnString;
 }
 
 export const logger = new Logger();

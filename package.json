@@ -16,7 +16,8 @@
   "license": "MIT",
   "packageManager": "yarn@3.1.1",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "./dist/index.js -u a"
   },
   "bin": {
     "viteray": "dist/index.js"
