@@ -55,7 +55,7 @@ export function getConfiguration(entryPointArg = '') {
 
     let entryPoint = entryPointArg;
     if (!entryPoint) {
-      let entryPoint = getPackageJsonField(packageJson, 'main');
+      entryPoint = getPackageJsonField(packageJson, 'main');
 
       if (!entryPoint.startsWith('/')) {
         entryPoint = `/${entryPoint}`;
