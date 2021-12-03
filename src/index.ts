@@ -20,8 +20,6 @@ const parser = yargs(process.argv.slice(2)).options({
 });
 
 handleAndLogErrors(async () => {
-  logWithModuleLogo(`Server running on http://localhost:${12}/`);
-
   const argv = await parser.argv;
 
   const configuration = getConfiguration(argv.e);
