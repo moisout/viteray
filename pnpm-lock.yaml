@@ -804,8 +804,8 @@ packages:
     resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=}
     dev: false
 
-  /joycon/3.1.0:
-    resolution: {integrity: sha512-5Y/YJghKF/IzaUXTut0JtbQyHfBShTaIsH7hHhGXEzYO07zWdWZm5hr3Q6miqhrwsRqqm3mgOnUEZdn+1aRxKQ==}
+  /joycon/3.1.1:
+    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
     engines: {node: '>=10'}
     dev: true
 
@@ -956,7 +956,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 4.1.1
       esbuild: 0.14.1
-      joycon: 3.1.0
+      joycon: 3.1.1
       jsonc-parser: 3.0.0
       rollup: 2.60.2
     dev: true
