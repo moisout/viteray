@@ -10,7 +10,8 @@ import yargs from 'yargs';
 import { getVitePluginTransformSelect } from './selects/vitePluginTransformSelect';
 import { getConfiguration } from './config';
 import { getStaticAssetsMiddleware } from './middlewares/staticFileMiddleware';
-import { logger } from './cli/logger';
+import { logWithModuleLogo } from './cli/logger';
+import { handleAndLogErrors } from './cli/errorHandler';
 
 const parser = yargs(process.argv.slice(2)).options({
   u: { type: 'string', alias: 'url', demandOption: true },
@@ -18,9 +19,7 @@ const parser = yargs(process.argv.slice(2)).options({
   e: { type: 'string', alias: 'entrypoint' },
 });
 
-(async () => {
-  logger.log('testing da loggy');
-
+handleAndLogErrors(async () => {
   const argv = await parser.argv;
 
   const configuration = getConfiguration(argv.e);
@@ -51,5 +50,5 @@ const parser = yargs(process.argv.slice(2)).options({
 
   // Create endpoint
   http.createServer(connectServer).listen(port);
-  logger.log(`Server running on http://localhost:${port}/`);
-})();
+  logWithModuleLogo(`Server running on http://localhost:${port}/`);
+});

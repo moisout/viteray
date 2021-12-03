@@ -21,7 +21,12 @@ export function getConfiguration(entryPointArg = '') {
     webContextPath: '',
   };
 
-  const npmBundlerrcString = fs.readFileSync(npmBundlerrcDir)?.toString();
+  let npmBundlerrcString = null;
+  try {
+    npmBundlerrcString = fs.readFileSync(npmBundlerrcDir)?.toString();
+  } catch {
+    throw new Error('No .npmbundlerrc found.');
+  }
 
   if (npmBundlerrcString) {
     const npmBundlerrc = JSON.parse(npmBundlerrcString);
@@ -40,9 +45,17 @@ export function getConfiguration(entryPointArg = '') {
         'Field "create-jar.features.web-context" in .npmbundlerrc missing.'
       );
     }
+  } else {
+    throw new Error('No .npmbundlerrc found.');
   }
 
-  const packageJsonString = fs.readFileSync(packageJsonDir)?.toString();
+  let packageJsonString = null;
+  try {
+    packageJsonString = fs.readFileSync(packageJsonDir)?.toString();
+  } catch {
+    throw new Error('No package.json found.');
+  }
+
   if (packageJsonString) {
     const packageJson = JSON.parse(packageJsonString);
 
