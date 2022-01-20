@@ -12,6 +12,7 @@ import { getConfiguration } from './config';
 import { getStaticAssetsMiddleware } from './middlewares/staticFileMiddleware';
 import { logWithModuleLogo } from './cli/logger';
 import { handleAndLogErrors } from './cli/errorHandler';
+import { injectPolyfills } from './cli/polyfill';
 
 const parser = yargs(process.argv.slice(2)).options({
   u: { type: 'string', alias: 'url', demandOption: true },
@@ -20,6 +21,7 @@ const parser = yargs(process.argv.slice(2)).options({
 });
 
 handleAndLogErrors(async () => {
+  injectPolyfills();
   const argv = await parser.argv;
 
   const configuration = getConfiguration(argv.e);

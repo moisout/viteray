@@ -18,8 +18,9 @@ const stringLength = (str: string) =>
 const bar = (left: string, right: string) =>
   `${left}${chars.horizontalWall.repeat(consoleWidth())}${right}`;
 
+const spacesCount = consoleWidth() - stringLength(smallLogo) - 3;
 const topBarWithLogo = `${chars.topLeft}${chars.horizontalWall.repeat(
-  consoleWidth() - stringLength(smallLogo) - 3
+  spacesCount > 0 ? spacesCount : stringLength(smallLogo)
 )} ${smallLogo} ${chars.horizontalWall.repeat(1)}${chars.topRight}`;
 
 const topBar = bar(chars.topLeft, chars.topRight);
@@ -29,7 +30,10 @@ const bottomBar = bar(chars.bottomLeft, chars.bottomRight);
 function multilineWithWalls(msg: string) {
   let returnString = '';
   msg.split('\n').forEach((msgLine) => {
-    const spaces = ' '.repeat(consoleWidth() - stringLength(msgLine) - 1);
+    const spacesCount = consoleWidth() - stringLength(msgLine) - 1;
+    const spaces = ' '.repeat(
+      spacesCount > 0 ? spacesCount : stringLength(msgLine)
+    );
     returnString += `${chars.verticalWall} ${msgLine}${spaces}${chars.verticalWall}\n`;
   });
   return returnString.slice(0, -1);
