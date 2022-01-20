@@ -1,8 +1,8 @@
 {
   "name": "@clavis/viteray",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Zero-config module to use vite for liferay portlet development.",
-  "main": "src/index",
+  "main": "dist/index",
   "homepage": "https://github.com/mauriceoegerli/viteray",
   "repository": {
     "type": "git",
