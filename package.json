@@ -31,7 +31,7 @@
     "@types/serve-static": "1.13.10",
     "@types/yargs": "17.0.7",
     "esbuild": "0.14.11",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "rollup": "2.64.0",
     "rollup-plugin-esbuild": "4.7.2",
     "rollup-plugin-preserve-shebangs": "0.2.0",
