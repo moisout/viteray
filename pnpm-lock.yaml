@@ -16,7 +16,7 @@ specifiers:
   finalhandler: ^1.1.2
   harmon: ^1.4.4
   http-proxy: ^1.18.1
-  prettier: 2.5.0
+  prettier: 2.5.1
   rollup: 2.64.0
   rollup-plugin-esbuild: 4.7.2
   rollup-plugin-preserve-shebangs: 0.2.0
@@ -46,7 +46,7 @@ devDependencies:
   '@types/serve-static': 1.13.10
   '@types/yargs': 17.0.8
   esbuild: 0.14.11
-  prettier: 2.5.0
+  prettier: 2.5.1
   rollup: 2.64.0
   rollup-plugin-esbuild: 4.7.2_esbuild@0.14.11+rollup@2.64.0
   rollup-plugin-preserve-shebangs: 0.2.0_rollup@2.64.0
@@ -869,8 +869,8 @@ packages:
       source-map-js: 1.0.1
     dev: false
 
-  /prettier/2.5.0:
-    resolution: {integrity: sha512-FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==}
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
