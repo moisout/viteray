@@ -54,12 +54,12 @@ export default {
 ```
 
 3. Add a script to your package.json.  
-   Specify the url of your instance with the argument "-c".
+   Specify the url of your instance with the argument "-u".
 
 ```json
 {
   "scripts": {
-    "dev": "viteray -c http://example.com"
+    "dev": "viteray -u http://example.com"
   }
 }
 ```
