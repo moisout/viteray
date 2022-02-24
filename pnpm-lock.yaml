@@ -7,7 +7,7 @@ specifiers:
   '@types/finalhandler': 1.1.1
   '@types/harmon': 1.4.1
   '@types/http-proxy': 1.17.8
-  '@types/node': 16.11.21
+  '@types/node': 16.11.26
   '@types/serve-static': 1.13.10
   '@types/yargs': 17.0.8
   chalk: ~4
@@ -42,7 +42,7 @@ devDependencies:
   '@types/finalhandler': 1.1.1
   '@types/harmon': 1.4.1
   '@types/http-proxy': 1.17.8
-  '@types/node': 16.11.21
+  '@types/node': 16.11.26
   '@types/serve-static': 1.13.10
   '@types/yargs': 17.0.8
   esbuild: 0.14.11
@@ -102,7 +102,7 @@ packages:
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 16.11.21
+      '@types/node': 16.11.26
     dev: true
 
   /@types/estree/0.0.39:
@@ -116,7 +116,7 @@ packages:
   /@types/finalhandler/1.1.1:
     resolution: {integrity: sha512-fT+Qs+kczrGnY9EpJpFHbdfdyKSoHUCKo3gJYbDWSSQFc18Td87AelfhMM8zqHRcP97/tk8AijV2zSUdClJK+Q==}
     dependencies:
-      '@types/node': 16.11.21
+      '@types/node': 16.11.26
     dev: true
 
   /@types/harmon/1.4.1:
@@ -126,22 +126,22 @@ packages:
   /@types/http-proxy/1.17.8:
     resolution: {integrity: sha512-5kPLG5BKpWYkw/LVOGWpiq3nEVqxiN32rTgI53Sk12/xHFQ2rG3ehI9IO+O3W2QoKeyB92dJkoka8SUm6BX1pA==}
     dependencies:
-      '@types/node': 16.11.21
+      '@types/node': 16.11.26
     dev: true
 
   /@types/mime/1.3.2:
     resolution: {integrity: sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==}
     dev: true
 
-  /@types/node/16.11.21:
-    resolution: {integrity: sha512-Pf8M1XD9i1ksZEcCP8vuSNwooJ/bZapNmIzpmsMaL+jMI+8mEYU3PKvs+xDNuQcJWF/x24WzY4qxLtB0zNow9A==}
+  /@types/node/16.11.26:
+    resolution: {integrity: sha512-GZ7bu5A6+4DtG7q9GsoHXy3ALcgeIHP4NnL0Vv2wu0uUB/yQex26v0tf6/na1mm0+bS9Uw+0DFex7aaKr2qawQ==}
     dev: true
 
   /@types/serve-static/1.13.10:
     resolution: {integrity: sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 16.11.21
+      '@types/node': 16.11.26
     dev: true
 
   /@types/yargs-parser/20.2.1:
