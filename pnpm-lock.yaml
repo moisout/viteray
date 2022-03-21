@@ -9,7 +9,7 @@ specifiers:
   '@types/http-proxy': 1.17.8
   '@types/node': 16.11.21
   '@types/serve-static': 1.13.10
-  '@types/yargs': 17.0.8
+  '@types/yargs': 17.0.10
   chalk: ~4
   connect: ^3.7.0
   esbuild: 0.14.11
@@ -44,7 +44,7 @@ devDependencies:
   '@types/http-proxy': 1.17.8
   '@types/node': 16.11.21
   '@types/serve-static': 1.13.10
-  '@types/yargs': 17.0.8
+  '@types/yargs': 17.0.10
   esbuild: 0.14.11
   prettier: 2.6.0
   rollup: 2.64.0
@@ -148,8 +148,8 @@ packages:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
     dev: true
 
-  /@types/yargs/17.0.8:
-    resolution: {integrity: sha512-wDeUwiUmem9FzsyysEwRukaEdDNcwbROvQ9QGRKaLI6t+IltNzbn4/i4asmB10auvZGQCzSQ6t0GSczEThlUXw==}
+  /@types/yargs/17.0.10:
+    resolution: {integrity: sha512-gmEaFwpj/7f/ROdtIlci1R1VYU1J4j95m8T+Tj3iBgiBFKg1foE/PSl93bBd5T9LDXNPo8UlNN6W0qwD8O5OaA==}
     dependencies:
       '@types/yargs-parser': 21.0.0
     dev: true
