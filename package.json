@@ -21,7 +21,7 @@
     "viteray": "dist/index.js"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-commonjs": "21.0.2",
     "@rollup/plugin-json": "4.1.0",
     "@types/connect": "3.4.35",
     "@types/finalhandler": "1.1.1",
