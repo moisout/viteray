@@ -17,7 +17,7 @@ specifiers:
   harmon: ^1.4.4
   http-proxy: ^1.18.1
   prettier: 2.6.1
-  rollup: 2.64.0
+  rollup: 2.70.1
   rollup-plugin-esbuild: 4.8.2
   rollup-plugin-preserve-shebangs: 0.2.0
   serve-static: ^1.14.1
@@ -36,8 +36,8 @@ dependencies:
   yargs: 17.4.0
 
 devDependencies:
-  '@rollup/plugin-commonjs': 21.0.3_rollup@2.64.0
-  '@rollup/plugin-json': 4.1.0_rollup@2.64.0
+  '@rollup/plugin-commonjs': 21.0.3_rollup@2.70.1
+  '@rollup/plugin-json': 4.1.0_rollup@2.70.1
   '@types/connect': 3.4.35
   '@types/finalhandler': 1.1.1
   '@types/harmon': 1.4.1
@@ -47,39 +47,39 @@ devDependencies:
   '@types/yargs': 17.0.10
   esbuild: 0.14.11
   prettier: 2.6.1
-  rollup: 2.64.0
-  rollup-plugin-esbuild: 4.8.2_esbuild@0.14.11+rollup@2.64.0
-  rollup-plugin-preserve-shebangs: 0.2.0_rollup@2.64.0
+  rollup: 2.70.1
+  rollup-plugin-esbuild: 4.8.2_esbuild@0.14.11+rollup@2.70.1
+  rollup-plugin-preserve-shebangs: 0.2.0_rollup@2.70.1
   typescript: 4.6.3
 
 packages:
 
-  /@rollup/plugin-commonjs/21.0.3_rollup@2.64.0:
+  /@rollup/plugin-commonjs/21.0.3_rollup@2.70.1:
     resolution: {integrity: sha512-ThGfwyvcLc6cfP/MWxA5ACF+LZCvsuhUq7V5134Az1oQWsiC7lNpLT4mJI86WQunK7BYmpUiHmMk2Op6OAHs0g==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^2.38.3
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.64.0
+      '@rollup/pluginutils': 3.1.0_rollup@2.70.1
       commondir: 1.0.1
       estree-walker: 2.0.2
       glob: 7.2.0
       is-reference: 1.2.1
       magic-string: 0.25.9
       resolve: 1.22.0
-      rollup: 2.64.0
+      rollup: 2.70.1
     dev: true
 
-  /@rollup/plugin-json/4.1.0_rollup@2.64.0:
+  /@rollup/plugin-json/4.1.0_rollup@2.70.1:
     resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.64.0
-      rollup: 2.64.0
+      '@rollup/pluginutils': 3.1.0_rollup@2.70.1
+      rollup: 2.70.1
     dev: true
 
-  /@rollup/pluginutils/3.1.0_rollup@2.64.0:
+  /@rollup/pluginutils/3.1.0_rollup@2.70.1:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
@@ -88,7 +88,7 @@ packages:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
       picomatch: 2.3.1
-      rollup: 2.64.0
+      rollup: 2.70.1
     dev: true
 
   /@rollup/pluginutils/4.2.0:
@@ -1010,7 +1010,7 @@ packages:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  /rollup-plugin-esbuild/4.8.2_esbuild@0.14.11+rollup@2.64.0:
+  /rollup-plugin-esbuild/4.8.2_esbuild@0.14.11+rollup@2.70.1:
     resolution: {integrity: sha512-wsaYNOjzTb6dN1qCIZsMZ7Q0LWiPJklYs2TDI8vJA2LUbvtPUY+17TC8C0vSat3jPMInfR9XWKdA7ttuwkjsGQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1023,22 +1023,22 @@ packages:
       esbuild: 0.14.11
       joycon: 3.1.1
       jsonc-parser: 3.0.0
-      rollup: 2.64.0
+      rollup: 2.70.1
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /rollup-plugin-preserve-shebangs/0.2.0_rollup@2.64.0:
+  /rollup-plugin-preserve-shebangs/0.2.0_rollup@2.70.1:
     resolution: {integrity: sha512-OEyTIfZwUJ7yUAVAbegac/bNvp1WJzgZcQNCFprWX42wwwOqlJwrev9lUmzZdYVgCWct+03xUPvZg4RfgkM9oQ==}
     peerDependencies:
       rollup: '*'
     dependencies:
       magic-string: 0.25.9
-      rollup: 2.64.0
+      rollup: 2.70.1
     dev: true
 
-  /rollup/2.64.0:
-    resolution: {integrity: sha512-+c+lbw1lexBKSMb1yxGDVfJ+vchJH3qLbmavR+awDinTDA2C5Ug9u7lkOzj62SCu0PKUExsW36tpgW7Fmpn3yQ==}
+  /rollup/2.70.1:
+    resolution: {integrity: sha512-CRYsI5EuzLbXdxC6RnYhOuRdtz4bhejPMSWjsFLfVM/7w/85n2szZv6yExqUXsBdz5KT8eoubeyDUDjhLHEslA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -1213,7 +1213,7 @@ packages:
       esbuild: 0.14.28
       postcss: 8.4.12
       resolve: 1.22.0
-      rollup: 2.64.0
+      rollup: 2.70.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
