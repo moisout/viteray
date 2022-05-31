@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@rollup/plugin-commonjs': 21.0.3
+  '@rollup/plugin-commonjs': 21.1.0
   '@rollup/plugin-json': 4.1.0
   '@types/connect': 3.4.35
   '@types/finalhandler': 1.1.1
@@ -36,7 +36,7 @@ dependencies:
   yargs: 17.4.0
 
 devDependencies:
-  '@rollup/plugin-commonjs': 21.0.3_rollup@2.75.3
+  '@rollup/plugin-commonjs': 21.1.0_rollup@2.75.3
   '@rollup/plugin-json': 4.1.0_rollup@2.75.3
   '@types/connect': 3.4.35
   '@types/finalhandler': 1.1.1
@@ -54,8 +54,8 @@ devDependencies:
 
 packages:
 
-  /@rollup/plugin-commonjs/21.0.3_rollup@2.75.3:
-    resolution: {integrity: sha512-ThGfwyvcLc6cfP/MWxA5ACF+LZCvsuhUq7V5134Az1oQWsiC7lNpLT4mJI86WQunK7BYmpUiHmMk2Op6OAHs0g==}
+  /@rollup/plugin-commonjs/21.1.0_rollup@2.75.3:
+    resolution: {integrity: sha512-6ZtHx3VHIp2ReNNDxHjuUml6ur+WcQ28N1yHgCQwsbNkQg2suhxGMDQGJOn/KuDxKtd1xuZP5xSTwBA4GQ8hbA==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^2.38.3
@@ -205,11 +205,11 @@ packages:
     dev: false
 
   /commondir/1.0.1:
-    resolution: {integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=}
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /connect/3.7.0:
@@ -739,7 +739,7 @@ packages:
     dev: false
 
   /fs.realpath/1.0.0:
-    resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
+    resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
   /fsevents/2.3.2:
@@ -836,7 +836,7 @@ packages:
     dev: false
 
   /inflight/1.0.6:
-    resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=}
+    resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
