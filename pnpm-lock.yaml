@@ -18,7 +18,7 @@ specifiers:
   http-proxy: ^1.18.1
   prettier: 2.6.1
   rollup: 2.75.3
-  rollup-plugin-esbuild: 4.8.2
+  rollup-plugin-esbuild: 4.10.3
   rollup-plugin-preserve-shebangs: 0.2.0
   serve-static: ^1.14.1
   typescript: 4.6.3
@@ -48,7 +48,7 @@ devDependencies:
   esbuild: 0.14.11
   prettier: 2.6.1
   rollup: 2.75.3
-  rollup-plugin-esbuild: 4.8.2_esbuild@0.14.11+rollup@2.75.3
+  rollup-plugin-esbuild: 4.10.3_esbuild@0.14.11+rollup@2.75.3
   rollup-plugin-preserve-shebangs: 0.2.0_rollup@2.75.3
   typescript: 4.6.3
 
@@ -897,7 +897,7 @@ packages:
     dev: false
 
   /ms/2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: false
 
   /ms/2.1.2:
@@ -1021,8 +1021,8 @@ packages:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  /rollup-plugin-esbuild/4.8.2_esbuild@0.14.11+rollup@2.75.3:
-    resolution: {integrity: sha512-wsaYNOjzTb6dN1qCIZsMZ7Q0LWiPJklYs2TDI8vJA2LUbvtPUY+17TC8C0vSat3jPMInfR9XWKdA7ttuwkjsGQ==}
+  /rollup-plugin-esbuild/4.10.3_esbuild@0.14.11+rollup@2.75.3:
+    resolution: {integrity: sha512-RILwUCgnCL5vo8vyZ/ZpwcqRuE5KmLizEv6BujBQfgXFZ6ggcS0FiYvQN+gsTJfWCMaU37l0Fosh4eEufyO97Q==}
     engines: {node: '>=12'}
     peerDependencies:
       esbuild: '>=0.10.1'
