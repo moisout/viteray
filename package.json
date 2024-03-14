@@ -30,7 +30,7 @@
     "@types/node": "16.11.26",
     "@types/serve-static": "1.13.10",
     "@types/yargs": "17.0.10",
-    "esbuild": "0.14.11",
+    "esbuild": "0.20.2",
     "prettier": "2.6.1",
     "rollup": "2.75.3",
     "rollup-plugin-esbuild": "4.8.2",
