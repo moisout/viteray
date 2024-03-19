@@ -27,7 +27,7 @@
     "@types/finalhandler": "1.1.1",
     "@types/harmon": "1.4.1",
     "@types/http-proxy": "1.17.8",
-    "@types/node": "16.11.26",
+    "@types/node": "16.18.91",
     "@types/serve-static": "1.13.10",
     "@types/yargs": "17.0.10",
     "esbuild": "0.14.11",
